@@ -1,0 +1,14 @@
+---
+# tasks file for role-redis
+# tasks/main.yml
+   - name: ensure redis is installed
+     become: true 
+     yum:
+       name: redis 
+       state: present
+       update_cache: true
+   - name: ensure redis is started
+     service:
+       name: redis
+       state: started
+
