@@ -1,8 +1,7 @@
 ---
 - name: Converge
   hosts: all
-  become: true 
   tasks:
     - name: "Include role-redis"
       include_role:
-        - role-redis
+        name: "role-redis"
